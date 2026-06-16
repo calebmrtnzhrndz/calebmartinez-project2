@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 2</title>
+        <link rel="stylesheet" href="project2.css">
+    </head>
+    <body>
+
+    <div class="content">
+        <header>
+            <h1>Monthly Mortgage Calculator</h1>
+            <h5>--------------------------------- (fixed-rate only) --------------------------------</h5>
+        </header>
+
+        <div class="left">
+            <h2>What Is a Mortgage?</h2>
+            <p>A mortgage is a specialized loan used to purchase real estate or borrow against the value of a home you already own. The property itself serves as collateral. If you fail to repay the loan, the lender can take ownership of the property through a legal process called foreclosure.</p>
+            <p>Because homes are expensive, paying the entire price upfront is nearly impossible for most buyers. Mortgages make homeownership possible by spreading the cost over 10 to 30 years. Once you make your final payment, the home is 100% yours and the lender's lien against your property is removed. </p>
+            <p>Use our Mortgage Calculator to find your exact monthly payment in seconds or to compare different loan terms before you commit. </p>
+            <img src="property.jpg" alt="Monopoly property cards">
+        </div>
+        
+        <form action='javascript:void(0)' onsubmit='calculate()'>
+            <h3>Enter your information below!</h3>
+            <br>
+            <p><label for="principal">Principal: $</label><input type='number' id="principal" name="principal" step='any' required></p>
+            <p><label for='yearlyRate'>Yearly rate (%): </label><input type='number' id='yearlyRate' name='yearlyRate' step="any" required></p>
+            <p>
+                <label for="year">Length of Mortgage (in years):</label>
+                <select id="year" name="year">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                </select>
+            </p>
+            <p>Monthly payment: <span id ='result'></span></p>
+            <p><input type="submit" value="Calculate!"></p>
+            <img src="monopoly.jpg" alt="Monopoly man image">
+        </form>
+        <script src='project2.js'> </script>
+
+        <div class="right">
+            <h2>Mortgaging Rules in Monopoly</h2>
+            <ul>
+                <li>To mortgage property, you must first sell all houses and hotels in its color-group evenly back to the bank for half price</li>
+                <li>Players receive the exact mortgage value listed on the Title Deed card</li>
+                <li>You cannot collect rent on any property while it is mortgaged</li>
+                <li>To lift a mortgage, you must pay the bank the mortgage value plus a 10% interest fee</li>
+                <li>Players can trade mortgaged properties. When a mortgaged property is traded, the new owner must immediately pay a 10% interest fee. They may then choose to keep the property mortgaged or pay the mortgage value to unmortgage it.</li>
+            </ul>
+            <h2>Strategic Tips</h2>
+            <ul>
+                <li>If you're short on cash, it's almost always better to mortgage unbuilt properties rather than sell houses.</li>
+                <li>If you need to raise funds, the recommended order to mortgaged properties is:</li>
+                <ol>
+                    <li>Properties you are planning to trade away</li>
+                    <li>Properties on the quieter part of the board</li>
+                    <li>Single utilities</li>
+                    <li>Single railroads</li>
+                </ol>
+                <li>Don't mortgage a property that is part of a monopoly you are currently building on.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p> <a href="https://github.com/calebmrtnzhrndz/calebmartinez-project2" target="_blank">GitHub Repository</a></p>
+        </footer>
+    </div>
+
+    </body>
+</html>
